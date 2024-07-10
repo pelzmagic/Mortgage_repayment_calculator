@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+
+:root {
+    --WHITE: hsl(0, 0%, 100%);
+    --LIGHTSLATE: hsl(202, 86%, 94%);
+    --MEDIUMSLATE: hsl(203, 41%, 72%);
+    --DEEPSLATE: hsl(200, 26%, 54%);
+    --DEEPERSLATE: hsl(200, 24%, 40%);
+    --HEAVYSLATE: hsl(202, 55%, 16%);
+    --LIME: hsl(61, 70%, 52%);
+    --RED: hsl(4, 69%, 50%);
+}
+
+body {
+   background-color: var(--LIGHTSLATE);
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: "Plus Jakarta Sans", sans-serif;
+   font-size: 1rem;
+}
+
+.mortgage_card {
+    background-color: var(--WHITE);
+    border: 1px solid red;
+    display: flex;
+    gap: 10px;
+}
+.mortgage_calculator_section {
+    border: 1px solid brown;
+    width: 50%;
+    padding-top: 35px;
+    padding-left: 35px;
+}
+.mortgage_result {
+    border: 1px solid blue;
+    width: 50%;
+}
+.mortgage_heading {
+    border:1px solid purple;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: inherit;
+    color: var(--HEAVYSLATE);
+}
+.clear {
+    border: none;
+    background-color: var(--WHITE);
+    color: var(--DEEPSLATE);
+    font-family: inherit;
+    border-bottom: 1px solid var(--DEEPSLATE);
+}
+
+form {
+    border: 1px solid darkgreen;
+    margin-top: 30px;
+}
+.mortgage_amount {
+    border: 1px solid gold;
+}
+.mortgage_details {
+    border: 1px solid steelblue;
+    margin-top: 20px;
+}
+.mortgage_type {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.form_button {
+    margin-top: 20px;
+}

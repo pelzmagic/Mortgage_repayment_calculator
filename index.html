@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Mortgage Repayment Calculator</title>
+</head>
+<body>
+  <div class="mortgage_card">
+    <div class="mortgage_calculator_section">
+      <div class="mortgage_heading">
+        <h1>Mortgage Calculator</h1>
+        <button class="clear">Clear All</button>
+      </div>
+      <form action="" id="mortgage_form">
+        <div class="mortgage_amount">
+          <label for="mortgage_amount">Mortgage Amount</label>
+          <div class="amount_input">
+            <p class="symbol">$</p>
+            <input type="number" id="mortgage_amount" class="amount">
+          </div>
+        </div>
+
+        <div class="mortgage_details">
+          <div class="mortgage_term">
+            <label for="mortgage_term">Mortgage Term</label>
+            <div class="years">
+              <input type="number" id="mortgage_term" class="mortgage_length">
+              <p class="years">years</p>
+            </div>
+          </div>
+          <div class="interest">
+            <label for="interest_rate">Interest Rate</label>
+            <div class="mortgage_interest">
+              <input type="number" id="interest rate" class="mortgage_rate">
+              <p class="percentage">%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mortgage_type">
+          <label for="Mortgage type">Mortgage Type</label>
+          <div class="first_radio_input">
+            <input type="radio" class="first_radio" id="radio_input">
+            <label for="radio_input">Repayment</label>
+          </div>
+          <div class="second_radio_input">
+            <input type="radio" class="second_radio" id="interest_only">
+            <label for="interest_only">Interest Only</label>
+          </div>
+        </div>
+
+        <button class="form_button" type="submit"><img src="./assets/images/icon-calculator.svg" alt="a calculator" width="15" height="15">Calculate Repayments</button>
+      </form>
+    </div>
+    <div class="mortgage_result">
+      <div class="result_content">
+        <img src="./assets/images/illustration-empty.svg" alt="a calculator illustration">
+        <h2>Results shown here</h2>
+        <p class="result_details">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
