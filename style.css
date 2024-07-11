@@ -30,16 +30,18 @@ body {
 }
 
 .mortgage_card {
+    width: 60vw;
     background-color: var(--WHITE);
     border: 1px solid red;
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    overflow: hidden;
 }
 .mortgage_calculator_section {
     border: 1px solid brown;
     width: 50%;
     padding-top: 35px;
-    padding-left: 35px;
+    padding-left: 20px;
 }
 .mortgage_result {
     border: 1px solid blue;
@@ -50,6 +52,7 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 h1 {
     font-size: 1.2em;
@@ -62,24 +65,145 @@ h1 {
     background-color: var(--WHITE);
     color: var(--DEEPSLATE);
     font-family: inherit;
+    font-weight: 700;
     border-bottom: 1px solid var(--DEEPSLATE);
 }
 
 form {
     border: 1px solid darkgreen;
     margin-top: 30px;
+    width: 100%;
 }
 .mortgage_amount {
     border: 1px solid gold;
+    width: 100%;
 }
 .mortgage_details {
-    border: 1px solid steelblue;
     margin-top: 20px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
 }
 .mortgage_type {
-    border: 1px solid black;
     margin-top: 20px;
+    width: 100%;
+}
+.amount_input {
+    border: 1.5px solid var(--DEEPERSLATE);
+    display: flex;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 7px;
+}
+.amount {
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+}
+.symbol {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 8px;
+    color: var(--DEEPSLATE);
+    background-color: var(--LIGHTSLATE);
+}
+.mortgage_amount > label {
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--DEEPERSLATE);
+}
+.years {
+    border: 1.5px solid var(--DEEPERSLATE);
+    display: flex;
+    height: 35px;
+    border-radius: 5px;
+    /* width: 50%; */
+    margin-top: 7px;
+}
+.mortgage_interest {
+    border: 1.5px solid var(--DEEPERSLATE);
+    display: flex;
+    height: 35px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    margin-top: 7px;
+}
+.mortgage_rate {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.length {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 8px;
+    color: var(--DEEPERSLATE);
+    background-color: var(--LIGHTSLATE);
+    font-size: 13px;
+}
+.mortgage_length {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.percentage {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 8px;
+    color: var(--DEEPERSLATE);
+    background-color: var(--LIGHTSLATE);
+    font-size: 13px;
+}
+.mortgage_term > label {
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--DEEPERSLATE);
+}
+.interest > label {
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--DEEPERSLATE);
+}
+.mortgage_type > label {
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--DEEPERSLATE);
+}
+.first_radio_input {
+    display: flex;
+    gap: 12px;
+    border: 1.5px solid var(--DEEPERSLATE);
+    height: 35px;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 7px;
+}
+.second_radio_input {
+    display: flex;
+    gap: 12px;
+    border: 1.5px solid var(--DEEPERSLATE);
+    border-radius: 5px;
+    height: 35px;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.first_radio_input > label {
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--HEAVYSLATE);
+    font-size: 14.5px;
+}
+.second_radio_input > label {
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--HEAVYSLATE);
+    font-size: 14.5px;
 }
 .form_button {
     margin-top: 20px;
+    margin-bottom: 25px;
+    height: 40px;
+    width: 200px;
 }
