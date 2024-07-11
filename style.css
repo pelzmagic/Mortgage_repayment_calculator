@@ -36,19 +36,19 @@ body {
     display: flex;
     gap: 20px;
     overflow: hidden;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .mortgage_calculator_section {
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     width: 50%;
     padding-top: 35px;
     padding-left: 20px;
 }
-.mortgage_result {
-    border: 1px solid blue;
-    width: 50%;
-}
 .mortgage_heading {
-    border:1px solid purple;
+    /* border:1px solid purple; */
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -70,12 +70,12 @@ h1 {
 }
 
 form {
-    border: 1px solid darkgreen;
+    /* border: 1px solid darkgreen; */
     margin-top: 30px;
     width: 100%;
 }
 .mortgage_amount {
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     width: 100%;
 }
 .mortgage_details {
@@ -204,6 +204,46 @@ form {
 .form_button {
     margin-top: 20px;
     margin-bottom: 25px;
-    height: 40px;
-    width: 200px;
+    height: 45px;
+    width: 250px;
+    background-color: var(--LIME);
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: .9em;
+}
+.repayment_button {
+    display: flex;
+    align-items: center;
+    width: 74%;
+    margin: auto;
+    gap: 5px;
+}
+.mortgage_result {
+    width: 50%;
+    background-color: var(--HEAVYSLATE);
+    border-bottom-left-radius: 70px;
+}
+.result_content {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    font-family: inherit;
+    font-size: 1.3em;
+    color: var(--WHITE);
+    font-weight: 500;
+}
+p {
+    color: var(--MEDIUMSLATE);
+    font-family: inherit;
+    font-size: .8em;
+    width: 72%;
+    text-align: center;
 }
