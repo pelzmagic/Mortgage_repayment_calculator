@@ -21,6 +21,7 @@
             <p class="symbol">$</p>
             <input type="number" id="mortgage_amount" class="amount">
           </div>
+          <p class="amount_error">This field is required</p>
         </div>
 
         <div class="mortgage_details">
@@ -39,27 +40,47 @@
             </div>
           </div>
         </div>
+        <p class="details_error">This field is required</p>
 
         <div class="mortgage_type">
           <label for="Mortgage type">Mortgage Type</label>
           <div class="first_radio_input">
-            <input type="radio" class="first_radio" id="radio_input">
+            <input type="radio" class="first_radio" id="radio_input" name="repayment-type">
             <label for="radio_input">Repayment</label>
           </div>
           <div class="second_radio_input">
-            <input type="radio" class="second_radio" id="interest_only">
+            <input type="radio" class="second_radio" id="interest_only" name="interest_type">
             <label for="interest_only">Interest Only</label>
           </div>
+          <p class="type_error">This field is required</p>
         </div>
 
         <button class="form_button" type="submit"><div class="repayment_button"><img src="./assets/images/icon-calculator.svg" alt="a calculator" width="20" height="20">Calculate Repayments</div></button>
       </form>
     </div>
     <div class="mortgage_result">
-      <div class="result_content">
+      <!-- <div class="result_content">
         <img src="./assets/images/illustration-empty.svg" alt="a calculator illustration" width="150" height="150">
         <h2>Results shown here</h2>
         <p class="result_details">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+      </div> -->
+
+      <div class="repayment_result">
+        <h3>Your results</h3>
+        <p class="result_info">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+        <div class="result_card">
+          <div class="result_details">
+            <div class="monthly_repayments">
+              <p class="monthly">Your monthly repayments</p>
+              <p class="monthly_info">$1,797.74</p>
+            </div>
+            <hr />
+            <div class="yearly_repayments">
+              <p class="yearly">Total you'll repay over the term</p>
+              <p class="yearly_info">$539,322.94</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
