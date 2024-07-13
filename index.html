@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer charset="UTF-8"></script>
   <title>Mortgage Repayment Calculator</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
             <p class="symbol">$</p>
             <input type="number" id="mortgage_amount" class="amount">
           </div>
-          <p class="amount_error">This field is required</p>
+          <p class="amount_error hide">This field is required</p>
         </div>
 
         <div class="mortgage_details">
@@ -31,16 +32,17 @@
               <input type="number" id="mortgage_term" class="mortgage_length">
               <p class="length">years</p>
             </div>
+            <p class="term_error hidden">This field is required</p>
           </div>
           <div class="interest">
             <label for="interest_rate">Interest Rate</label>
             <div class="mortgage_interest">
-              <input type="number" id="interest rate" class="mortgage_rate">
+              <input type="number" id="interest_rate" class="mortgage_rate">
               <p class="percentage">%</p>
             </div>
+            <p class="rate_error conceal">This field is required</p>
           </div>
         </div>
-        <p class="details_error">This field is required</p>
 
         <div class="mortgage_type">
           <label for="Mortgage type">Mortgage Type</label>
@@ -52,20 +54,20 @@
             <input type="radio" class="second_radio" id="interest_only" name="interest_type">
             <label for="interest_only">Interest Only</label>
           </div>
-          <p class="type_error">This field is required</p>
+          <p class="type_error bury">This field is required</p>
         </div>
 
         <button class="form_button" type="submit"><div class="repayment_button"><img src="./assets/images/icon-calculator.svg" alt="a calculator" width="20" height="20">Calculate Repayments</div></button>
       </form>
     </div>
     <div class="mortgage_result">
-      <!-- <div class="result_content">
+      <div class="result_content">
         <img src="./assets/images/illustration-empty.svg" alt="a calculator illustration" width="150" height="150">
         <h2>Results shown here</h2>
         <p class="result_details">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
-      </div> -->
+      </div>
 
-      <div class="repayment_result">
+      <!-- <div class="repayment_result">
         <h3>Your results</h3>
         <p class="result_info">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
         <div class="result_card">
@@ -81,7 +83,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </body>

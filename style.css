@@ -67,6 +67,7 @@ h1 {
     font-family: inherit;
     font-weight: 700;
     border-bottom: 1px solid var(--DEEPSLATE);
+    cursor: pointer;
 }
 
 form {
@@ -167,44 +168,18 @@ form {
     outline: none;
     padding: 5px;
     width: 87%;
+    font-size: 1.1rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
-.length {
-    font-family: inherit;
-    font-weight: 700;
-    padding: 8px;
-    color: var(--DEEPERSLATE);
-    background-color: var(--LIGHTSLATE);
-    font-size: 13px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.length:hover {
-    background-color: var(--LIME);
-    color: var(--HEAVYSLATE);
 }
 .mortgage_length {
     border: none;
     outline: none;
     padding: 5px;
     width: 77%;
+    font-size: 1.1rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
-.percentage {
-    font-family: inherit;
-    font-weight: 700;
-    padding: 8px;
-    color: var(--DEEPERSLATE);
-    background-color: var(--LIGHTSLATE);
-    font-size: 13px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.percentage:hover {
-    background-color: var(--LIME);
-    color: var(--HEAVYSLATE);
 }
 .mortgage_term > label {
     font-size: 13px;
@@ -214,21 +189,31 @@ form {
 .mortgage_term {
     width: 50%;
 }
-.interest {
-    width: 50%;
-}
-.interest > label {
-    font-size: 13px;
-    font-family: inherit;
-    color: var(--DEEPERSLATE);
-}
-.details_error {
+.term_error {
     font-size: .7rem;
     text-align: start;
     font-family: inherit;
     color: var(--RED);
     font-weight: 700;
     margin-top: 7px;
+    width: 100%;
+}
+.interest {
+    width: 50%;
+}
+.rate_error {
+    font-size: .7rem;
+    text-align: start;
+    font-family: inherit;
+    color: var(--RED);
+    font-weight: 700;
+    margin-top: 7px;
+    width: 100%;
+}
+.interest > label {
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--DEEPERSLATE);
 }
 .mortgage_type > label {
     font-size: 13px;
@@ -248,11 +233,8 @@ form {
 .first_radio_input:hover {
     background-color: hsl(60, 78%, 85%);
     border: 1.5px solid var(--LIME);
+    cursor: pointer;
 }
-input[name="repayment-type"]:checked {
-    background-color: var(--LIME);
-}
-
 .second_radio_input {
     display: flex;
     gap: 12px;
@@ -266,8 +248,26 @@ input[name="repayment-type"]:checked {
 .second_radio_input:hover {
     background-color: hsl(60, 78%, 85%);
     border: 1.5px solid var(--LIME);
+    cursor: pointer;
 }
-input[name="interest-type"]:checked {
+input[type="radio"] {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    appearance: none;
+    outline: 1px solid var(--HEAVYSLATE);
+    outline-offset: 2px;
+}
+input[type="radio"]:hover {
+    outline: 1px solid var(--LIME);
+    cursor: pointer;
+}
+
+input[name="repayment-type"]:checked {
+    background-color: var(--LIME);
+}
+
+input[name="interest_type"]:checked {
     background-color: var(--LIME);
 }
 .first_radio_input > label {
@@ -301,6 +301,10 @@ input[name="interest-type"]:checked {
     font-family: inherit;
     font-weight: 700;
     font-size: .8rem;
+}
+.form_button:hover {
+    background-color:hsl(60, 86%, 73%);
+    cursor: pointer;
 }
 .repayment_button {
     display: flex;
@@ -405,4 +409,44 @@ div > .yearly_info {
     font-family: inherit;
     text-align: start;
     margin-top: 8px;
+}
+.length {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 8px;
+    color: var(--DEEPERSLATE);
+    background-color: var(--LIGHTSLATE);
+    font-size: 13px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.length:hover {
+    background-color: var(--LIME);
+    color: var(--HEAVYSLATE);
+}
+.percentage {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 8px;
+    color: var(--DEEPERSLATE);
+    background-color: var(--LIGHTSLATE);
+    font-size: 13px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.percentage:hover {
+    background-color: var(--LIME);
+    color: var(--HEAVYSLATE);
+}
+.hide {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+.conceal {
+    display: none;
+}
+.bury {
+    display: none;
 }
