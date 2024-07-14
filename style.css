@@ -450,3 +450,9 @@ div > .yearly_info {
 .bury {
     display: none;
 }
+.keep {
+    display: none;
+}
+.lock {
+    display: none;
+}

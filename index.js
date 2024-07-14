@@ -18,6 +18,8 @@ const mortgageTerm = document.querySelector(".years");
 const mortgageInterest = document.querySelector(".mortgage_interest");
 const firstRadio = document.querySelector(".first_radio_input");
 const secondRadio = document.querySelector(".second_radio_input");
+const repaymentResult = document.querySelector(".repayment_result");
+const mortgageResult = document.querySelector(".mortgage_result");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -37,4 +39,38 @@ form.addEventListener("submit", (e) => {
         dollarSymbol.style.color = "var(--DEEPSLATE)";
         amountInput.style.borderColor = "var(--HEAVYSLATE)";
     }
+
+    if (numberOfYears == "") {
+        yearsInputError.classList.remove("hidden");
+        years.style.backgroundColor = "var(--RED)";
+        years.style.color = "var(--WHITE)";
+        mortgageTerm.style.borderColor = "var(--RED)";
+    } else {
+        yearsInputError.classList.add("hidden");
+        years.style.backgroundColor = "var(--LIGHTSLATE)";
+        years.style.color = "var(--DEEPSLATE)";
+        mortgageTerm.style.borderColor = "var(--HEAVYSLATE)";
+    }
+
+    if (interestRate == "") {
+        interestInputError.classList.remove("conceal");
+        percentageSymbol.style.backgroundColor = "var(--RED)";
+        percentageSymbol.style.color = "var(--WHITE)";
+        mortgageInterest.style.borderColor = "var(--RED)";
+    } else {
+        interestInputError.classList.add("conceal");
+        percentageSymbol.style.backgroundColor = "var(--LIGHTSLATE)";
+        percentageSymbol.style.color = "var(--DEEPSLATE)";
+        mortgageInterest.style.borderColor = "var(--HEAVYSLATE)";
+    }
+    if (firstRadioInput.checked || secondRadioInput.checked) {
+        mortgageTypeError.classList.add("bury");
+    } else {
+        mortgageTypeError.classList.remove("bury");
+    }
+
+    if (mortgageAmount !== "" && numberOfYears !== "" && interestRate !== "" && (firstRadioInput.checked || secondRadioInput.checked)) {
+        repaymentResult.classList.add("keep");
+        mortgageResult.classList.remove("keep");
+    } 
 })
