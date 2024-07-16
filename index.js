@@ -18,16 +18,18 @@ const mortgageTerm = document.querySelector(".years");
 const mortgageInterest = document.querySelector(".mortgage_interest");
 const firstRadio = document.querySelector(".first_radio_input");
 const secondRadio = document.querySelector(".second_radio_input");
+const resultContent = document.querySelector(".result_content");
 const repaymentResult = document.querySelector(".repayment_result");
-const mortgageResult = document.querySelector(".mortgage_result");
+const monthlyInterestInfo = document.querySelector(".monthly_info");
+const yearlyInterestInfo = document.querySelector(".yearly_info");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const mortgageAmount = mortgageAmountInput.value;
-    const numberOfYears = yearsInput.value;
-    const interestRate = interestInput.value;
-
+    let mortgageAmount = mortgageAmountInput.value;
+    let numberOfYears = yearsInput.value;
+    let interestRate = interestInput.value;
+    
     if (mortgageAmount == "") {
         mortgageAmountError.classList.remove("hide");
         dollarSymbol.style.backgroundColor = "var(--RED)";
@@ -70,7 +72,36 @@ form.addEventListener("submit", (e) => {
     }
 
     if (mortgageAmount !== "" && numberOfYears !== "" && interestRate !== "" && (firstRadioInput.checked || secondRadioInput.checked)) {
-        repaymentResult.classList.add("keep");
-        mortgageResult.classList.remove("keep");
+        resultContent.classList.add("keep");
+        repaymentResult.classList.remove("stash");
     } 
+
+    mortgageAmount = parseFloat(mortgageAmountInput.value);
+    numberOfYears = parseFloat(yearsInput.value);
+    interestRate = parseFloat(interestInput.value);
+    const monthlyRepayment = () => {
+        let payment = ((mortgageAmount * (interestRate / 12)) / 1 - Math.pow((1 + (interestRate / 12)), -(numberOfYears / 12)));
+        let refinedPayment = payment.toFixed(2);
+        let convertedPayment = Number(refinedPayment);
+        let formattedRefinedPayment = convertedPayment.toLocaleString();
+        return formattedRefinedPayment;
+    }
+
+    const totalRepayment = () => {
+        let repayment = (mortgageAmount * numberOfYears * interestRate) / 12;
+        let refinedRepayment = repayment.toFixed(2);
+        let convertedRefinedRepayment = Number(refinedRepayment);
+        let formattedRefinedRepayment = convertedRefinedRepayment.toLocaleString();
+        return formattedRefinedRepayment;
+    }
+    
+    const monthlyPayment = monthlyRepayment();
+    monthlyInterestInfo.innerText = `${"$" + monthlyPayment}`;
+
+    const termlyRepayment = totalRepayment();
+    yearlyInterestInfo.innerText = `${"$" + termlyRepayment}`;
+})
+
+clearButton.addEventListener("click", () => {
+    form.reset;
 })
