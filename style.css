@@ -32,7 +32,6 @@ body {
 .mortgage_card {
     width: 60vw;
     background-color: var(--WHITE);
-    border: 1px solid red;
     display: flex;
     gap: 20px;
     overflow: hidden;
@@ -76,7 +75,6 @@ form {
     width: 100%;
 }
 .mortgage_amount {
-    border: 1px solid gold;
     width: 100%;
 }
 .mortgage_details {
@@ -84,12 +82,10 @@ form {
     display: flex;
     width: 100%;
     gap: 10px;
-    border: 1px solid red;
 }
 .mortgage_type {
     margin-top: 20px;
     width: 100%;
-    border: 1px solid blue;
 }
 .amount_input {
     border: 1.5px solid var(--DEEPERSLATE);
@@ -111,6 +107,7 @@ form {
     padding: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    color: var(--HEAVYSLATE);
 }
 .amount_input > p {
     font-family: inherit;
@@ -169,8 +166,10 @@ form {
     padding: 5px;
     width: 87%;
     font-size: 1.1rem;
+    font-weight: 700;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    color: var(--HEAVYSLATE);
 }
 .mortgage_length {
     border: none;
@@ -180,6 +179,8 @@ form {
     font-size: 1.1rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-weight: 700;
+    color: var(--HEAVYSLATE);
 }
 .mortgage_term > label {
     font-size: 13px;
@@ -319,7 +320,6 @@ input[name="interest_type"]:checked {
     border-bottom-left-radius: 70px;
 }
 .result_content {
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -333,7 +333,7 @@ h2 {
     color: var(--WHITE);
     font-weight: 500;
 }
-p {
+.result_details {
     color: var(--MEDIUMSLATE);
     font-family: inherit;
     font-size: .8em;
@@ -346,7 +346,6 @@ p {
     flex-direction: column;
     gap: 23px;
     margin: 30px;
-    border: 2px solid red;
 }
 h3 {
     color: var(--WHITE);
@@ -354,12 +353,14 @@ h3 {
     font-family: inherit;
     font-size: 1.6rem;
 }
-.repayment_result > p {
+.result_info {
     /* font-weight: 700; */
     font-family: inherit;
     font-size: 15px;
     width: 100%;
     text-align:start;
+    color: var(--DEEPSLATE);
+    /* line-height: 1.5; */
 }
 .result_card {
     width: 100%;
@@ -384,12 +385,13 @@ div > .monthly {
     text-align: start;
 }
 div > .monthly_info {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: inherit;
     font-weight: 700;
     text-align: start;
     color: var(--LIME);
     margin-top: 8px;
+    /* overflow: hidden; */
 }
 hr {
     width: 85%;
@@ -457,4 +459,58 @@ div > .yearly_info {
 .stash {
     display: none;
 }
- 
+
+@media (max-width: 545px) {
+    .mortgage_card {
+        width: 90vw;
+        flex-direction: column;
+        gap: 0;
+    }
+    .mortgage_calculator_section {
+        width: 90%;
+        padding-left: 0;
+        margin: auto;
+    }
+    .form_button {
+        width: 100%;
+        font-size: 1.05rem;
+        height: 45px;
+    }
+    .repayment_button {
+        gap: 11px;
+    }
+    .mortgage_details {
+        flex-direction: column;
+    }
+    .mortgage_term {
+        width: 100%;
+    }
+    .mortgage_length {
+        width: 83%;
+    }
+   .interest {
+    width: 100%;
+   }
+   .mortgage_rate {
+    width: 90%;
+   }
+   .mortgage_heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+   }
+   .mortgage_result {
+    width: 100%;
+    border-bottom-left-radius: 0;
+   }
+   .result_content {
+    padding-top: 22px;
+    padding-bottom: 10px;
+   }
+   .result_details {
+    width: 80%;
+   }
+   .result_info {
+    font-size:11px;
+   }
+}

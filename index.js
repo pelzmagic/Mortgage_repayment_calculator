@@ -80,7 +80,7 @@ form.addEventListener("submit", (e) => {
     numberOfYears = parseFloat(yearsInput.value);
     interestRate = parseFloat(interestInput.value);
     const monthlyRepayment = () => {
-        let payment = ((mortgageAmount * (interestRate / 12)) / 1 - Math.pow((1 + (interestRate / 12)), -(numberOfYears / 12)));
+        let payment = ((mortgageAmount * interestRate) / 1 - Math.pow((1 + (interestRate / 12)), -(numberOfYears / 12)));
         let refinedPayment = payment.toFixed(2);
         let convertedPayment = Number(refinedPayment);
         let formattedRefinedPayment = convertedPayment.toLocaleString();
@@ -102,6 +102,10 @@ form.addEventListener("submit", (e) => {
     yearlyInterestInfo.innerText = `${"$" + termlyRepayment}`;
 })
 
-clearButton.addEventListener("click", () => {
-    form.reset;
-})
+function clearForm() {
+    form.reset();
+    resultContent.classList.remove("keep");
+    repaymentResult.classList.add("stash");
+}
+
+clearButton.addEventListener("click", clearForm);
